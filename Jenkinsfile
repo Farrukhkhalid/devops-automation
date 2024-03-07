@@ -14,12 +14,12 @@ pipeline {
             steps {
                 script {
                     // Log in to Docker Hub
-                    withCredentials([usernamePassword(credentialsId: 'Git_cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                        sh 'sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                    //withCredentials([usernamePassword(credentialsId: 'Git_cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                        sh 'sudo docker login -u farrukhkhalid -p FRkkingot4444'
                     }
                     
                     // Push the Docker image to Docker Hub
-                    sh 'sudo docker push farrukhkhalid/jenkinstest'
+                    sh 'docker push farrukhkhalid/jenkinstest'
                 }
             }
         }
