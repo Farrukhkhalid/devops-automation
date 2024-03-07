@@ -15,7 +15,7 @@ pipeline {
                 script {
                     // Log in to Docker Hub
                     //withCredentials([usernamePassword(credentialsId: 'Git_cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                        sh 'sudo docker login -u farrukhkhalid -p FRkkingot4444'
+                        sh 'docker login -u farrukhkhalid -p FRkkingot4444'
                     }
                     
                     // Push the Docker image to Docker Hub
