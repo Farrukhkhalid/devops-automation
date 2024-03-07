@@ -14,8 +14,7 @@ pipeline {
             steps {
                 script {
                     // Log in to Docker Hub
-                    //withCredentials([usernamePassword(credentialsId: 'Git_cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) 
-                    {
+                    withCredentials([usernamePassword(credentialsId: 'Git_cred', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                         sh 'docker login -u farrukhkhalid -p FRkkingot4444'
                     }
                     
